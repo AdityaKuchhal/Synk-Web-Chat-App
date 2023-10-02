@@ -1,16 +1,12 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { chats } = require("./data/data");
+const connectDB = require("./config/db");
+const colors = require("colors");
 
-const app = express();
 dotenv.config();
-
-app.get("/", (req, res) => {
-  res.send("Successfully executed API!");
-});
-app.get("/api/chat", (req, res) => {
-  res.send(chats);
-});
+const app = express();
+connectDB();
 
 app.get("/api/chat/:chatId", (req, res) => {
   //   console.log(req.params.chatId);
@@ -20,4 +16,4 @@ app.get("/api/chat/:chatId", (req, res) => {
 
 const PORT = process.env.PORT || 8090;
 
-app.listen(PORT, console.log(`Server started at PORT ${PORT}!`));
+app.listen(PORT, console.log(`Server started at PORT ${PORT}!`.yellow.bold));
