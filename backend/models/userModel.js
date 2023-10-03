@@ -9,14 +9,14 @@ const userModel = mongoose.Schema(
     email: {
       type: String,
       required: true,
+      unique: true,
     },
     password: {
       type: String,
       required: true,
     },
-    picture: {
+    image: {
       type: String,
-      required: true,
       default: "https://icons8.com/icon/tZuAOUGm9AuS/user-default",
     },
   },
