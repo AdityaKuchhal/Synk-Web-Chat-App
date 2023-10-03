@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Chat = require("../models/chatModel");
-const Users = require("../models/userModel");
+const User = require("../models/userModel");
 
 const accessChat = asyncHandler(async (req, res) => {
   const { userId } = req.body;
@@ -20,7 +20,7 @@ const accessChat = asyncHandler(async (req, res) => {
     .populate("users", "-password")
     .populate("latestMessage");
 
-  isChat = await Users.populate(isChat, {
+  isChat = await User.populate(isChat, {
     path: "latestMesagge.sender",
     select: "name img email",
   });
@@ -60,7 +60,7 @@ const fetchChats = asyncHandler(async (req, res) => {
       .populate("latestMessage")
       .sort({ updatedAt: -1 })
       .then(async (results) => {
-        results = await Users.populate(results, {
+        results = await User.populate(results, {
           path: "latestMessage.sender",
           select: "name img email",
         });
@@ -73,6 +73,10 @@ const fetchChats = asyncHandler(async (req, res) => {
   }
 });
 
+//@description     Create New Group Chat
+//@route           POST /api/chat/group
+//@access          Protected
+
 const createGroupChat = asyncHandler(async (req, res) => {
   if (!req.body.users || !req.body.name) {
     return res.status(400).send({ message: "Please Fill all the feilds" });
@@ -83,7 +87,7 @@ const createGroupChat = asyncHandler(async (req, res) => {
   if (users.length < 2) {
     return res
       .status(400)
-      .send("More than 2 users are required to form a group chat");
+      .send({ message: "More than 2 users are required to form a group chat" });
   }
 
   users.push(req.user);
