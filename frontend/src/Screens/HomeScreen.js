@@ -9,18 +9,18 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { useHistory } from "react-router";
-import Login from "../components/Authentication/Login";
-import Signup from "../components/Authentication/Signup";
+import { useNavigate } from "react-router";
+import Login from "../Components/Authentication/Login";
+import Signup from "../Components/Authentication/Signup";
 
 function Homepage() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo"));
 
-    if (user) history.push("/chats");
-  }, [history]);
+    if (user) navigate("/chats");
+  }, [navigate]);
 
   return (
     <Container maxW="xl" centerContent>
@@ -35,7 +35,7 @@ function Homepage() {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
-          Talk-A-Tive
+          Synk
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
