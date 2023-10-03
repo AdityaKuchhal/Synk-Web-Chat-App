@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
+<<<<<<< HEAD
+=======
+    "@chakra-ui/react": "^2.8.1",
+>>>>>>> 1773d06e05f54958891cc67b0ff7979b485ea28e
     "axios": "^1.5.1",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
