@@ -3,11 +3,7 @@ import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import "./styles.css";
 import { IconButton, Spinner, useToast } from "@chakra-ui/react";
-<<<<<<< HEAD
 import { getSender, getSenderFull } from "../Config/ChatLogics";
-=======
-import { getSender, getSenderFull } from "../config/ChatLogic";
->>>>>>> 1773d06e05f54958891cc67b0ff7979b485ea28e
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ArrowBackIcon } from "@chakra-ui/icons";
@@ -17,15 +13,9 @@ import Lottie from "react-lottie";
 import animationData from "../Animations/typing.json";
 
 import io from "socket.io-client";
-<<<<<<< HEAD
-import UpdateGroupChatModal from "./misc/UpdateGroupChatModal";
-import { ChatState } from "../Context/chatProvider";
-const ENDPOINT = "http://localhost:8090"; // "https://Synk.herokuapp.com"; -> After deployment
-=======
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../context/chatProvider";
 const ENDPOINT = "http://localhost:5000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
->>>>>>> 1773d06e05f54958891cc67b0ff7979b485ea28e
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
