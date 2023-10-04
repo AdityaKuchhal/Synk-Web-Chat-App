@@ -6,7 +6,7 @@ const Chat = require("../models/chatModel");
 const allMessages = asyncHandler(async (req, res) => {
   try {
     const messages = await Message.find({ chat: req.params.chatId })
-      .populate("sender", "name pic email")
+      .populate("sender", "name img email")
       .populate("chat");
     res.json(messages);
   } catch (error) {
@@ -20,7 +20,14 @@ const sendMessage = asyncHandler(async (req, res) => {
 
   if (!content || !chatId) {
     console.log("Invalid data passed into request");
-    return res.sendStatus(400);
+    return res
+      .status(400)
+      .json({ message: "Invalid data passed into request" });
+  }
+
+  if (!req.user || !req.user._id) {
+    console.log("User not authenticated");
+    return res.status(401).json({ message: "User not authenticated" });
   }
 
   var newMessage = {
@@ -32,11 +39,11 @@ const sendMessage = asyncHandler(async (req, res) => {
   try {
     var message = await Message.create(newMessage);
 
-    message = await message.populate("sender", "name pic").execPopulate();
+    message = await message.populate("sender", "name img").execPopulate();
     message = await message.populate("chat").execPopulate();
     message = await User.populate(message, {
       path: "chat.users",
-      select: "name pic email",
+      select: "name img email",
     });
 
     await Chat.findByIdAndUpdate(req.body.chatId, { latestMessage: message });
