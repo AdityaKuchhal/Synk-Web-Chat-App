@@ -4,7 +4,7 @@ Welcome to the MERN (MongoDB, Express, React, Node.js) based web chat applicatio
 
 ## Table of Contents
 
-1. Current Features
+1. [Current Features](#current-features)
 2. Future Features
 3. Getting Started
 4. Usage
