@@ -5,10 +5,10 @@ Welcome to the MERN (MongoDB, Express, React, Node.js) based web chat applicatio
 ## Table of Contents
 
 1. [Current Features](#current-features)
-2. Future Features
-3. Getting Started
-4. Usage
-5. Contributing
+2. [Future Features](#future-features)
+3. [Getting Started](#getting-started)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
 
 ---
 
@@ -92,8 +92,6 @@ To set up and run the application locally, follow these steps:
 2. Navigate to the backend folder and install server dependencies: `cd backend && npm install`
 3. Create a `.env` file in the backend directory with the necessary environment variables (e.g., MongoDB connection string, JWT secret).
 4. Start the backend server: `npm start`
-5. Navigate to the frontend folder and install client dependencies: `cd ../frontend && npm install`
-6. Start the React development server: `npm start`
 
 Your MERN web chat application should now be up and running locally!
 
