@@ -69,9 +69,9 @@ const allUsers = asyncHandler(async (req, res) => {
       }
     : {};
 
-  const userId = req.user && req.user._id ? req.user._id : null;
+  // const userId = req.user && req.user._id ? req.user._id : null;
 
-  const users = await User.find(keyword).find({ _id: { $ne: userId } });
+  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
   res.send(users);
 });
 

@@ -66,8 +66,11 @@ const fetchChats = asyncHandler(async (req, res) => {
 });
 
 const createGroupChat = asyncHandler(async (req, res) => {
+  console.log("Request Body:", req.body); // Log the request body for debugging
+
   if (!req.body.users || !req.body.name) {
-    return res.status(400).send({ message: "Please Fill all the feilds" });
+    console.log("Missing users or name in request body");
+    return res.status(400).send({ message: "Please Fill all the fields" });
   }
 
   var users = JSON.parse(req.body.users);
