@@ -1,6 +1,6 @@
-# MERN Web Chat Application - Read Me
+# SYNK - A MERN Web Chat Application 
 
-Welcome to the MERN (MongoDB, Express, React, Node.js) based web chat application! This application allows users to communicate through text messages in real-time and provides various features for a seamless chatting experience. Below, you will find information on the current features, future plans, and how to set up and use the application.
+Welcome to **SYNK** a MERN (MongoDB, Express, React, Node.js) based web chat application! This application allows users to communicate through text messages in real-time and provides various features for a seamless chatting experience. Below, you will find information on the current features, future plans, and how to set up and use the application.
 
 ## Table of Contents
 
