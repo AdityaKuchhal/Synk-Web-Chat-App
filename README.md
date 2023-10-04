@@ -14,35 +14,35 @@ Welcome to **SYNK** a MERN (MongoDB, Express, React, Node.js) based web chat app
 
 ## Current Features
 
-1. Signup new user
+**1. Signup new user**
 
 - Users can create a new account by providing necessary information.
 
-2. Login user
+**2. Login user**
 
 - Registered users can log in with their credentials.
 
-3. Search user
+**3. Search user**
 
 - Logged-in users can search for other users by alphabet, making it easy to find friends to chat with.
 
-4. Create or access a chat
+**4. Create or access a chat**
 
 - Users can create new one-on-one chats with other users or access existing chats using a unique chatID.
 
-5. Fetching All Chats for a User
+**5. Fetching All Chats for a User**
 
 - Users can retrieve all their chat conversations by providing their userID.
 
-6. Creating a new group chat
+**6. Creating a new group chat**
 
 - Users can create group chats by specifying the chat IDs of participants.
 
-7. Sending a new message in single chat
+**7. Sending a new message in single chat**
 
 - Users can send text messages in one-on-one chats by providing the chatID.
 
-8. Sending a new message in group chat
+**8. Sending a new message in group chat**
 
 - Users can send text messages in group chats by specifying the chatID.
 
@@ -50,35 +50,35 @@ Welcome to **SYNK** a MERN (MongoDB, Express, React, Node.js) based web chat app
 
 ## Future Features
 
-## 1. Real-time Chat
+**1. Real-time Chat**
 
 - Leveraging the power of socket.io, our application will enable real-time conversations, fostering instant connections and enhancing collaboration.
 
-2. User Authentication
+**2. User Authentication**
 
 - Robust user authentication mechanisms will guarantee secure access control, ensuring that conversations remain private and protected.
 
-3. Multi-room Chat
+**3. Multi-room Chat**
 
 - Users will be able to create multiple chat rooms for topic-specific discussions, maintaining clarity and organization within the application.
 
-4. Media Integration
+**4. Media Integration**
 
 - Supporting various media types such as text, images, videos, and more, the application will enrich communication and engagement.
 
-5. Message History
+**5. Message History**
 
 - Access to chat history will empower users to revisit previous conversations, providing context and reference points.
 
-6. User Profiles
+**6. User Profiles**
 
 - Personalized user profiles, complete with avatars and status updates, will enable users to express their individuality within the chat community.
 
-7. Real-time Notifications
+**7. Real-time Notifications**
 
 - Immediate notifications will ensure users are promptly informed of new messages, keeping the conversation dynamic.
 
-8. Responsive Design
+**8. Responsive Design**
 
 - Our application's user-friendly design will adapt seamlessly to both desktop and mobile devices, guaranteeing accessibility.
 
