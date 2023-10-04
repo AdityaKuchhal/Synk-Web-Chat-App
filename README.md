@@ -50,7 +50,7 @@ Welcome to **SYNK** a MERN (MongoDB, Express, React, Node.js) based web chat app
 
 ## Future Features
 
-1. Real-time Chat
+## 1. Real-time Chat
 
 - Leveraging the power of socket.io, our application will enable real-time conversations, fostering instant connections and enhancing collaboration.
 
