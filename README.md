@@ -107,6 +107,54 @@ Your MERN web chat application should now be up and running locally!
 
 ---
 
+# Testing the API's thorugh POSTMAN
+
+Before testing the API, ensure you have the following:
+
+1. **Postman:** If you haven't already installed Postman, you can download it [here](https://www.postman.com/downloads/).
+
+2. **Import the collection by clicking the button below**
+
+   <img width="383" alt="Screenshot 2023-10-04 at 9 29 42 PM" src="https://github.com/AdityaKuchhal/Synk-Web-Chat-App/assets/67582528/016eb707-a164-4b9a-aacc-60fe9f1ddd1d">
+
+Follow the steps below to test the User **Registration API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Users folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/user** where URL is '_http://localhost:8090_' as a global variable.
+
+8. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields (`name`, `email`, `password`, and optionally `img`) to simulate a user registration. For example:
+     ```json
+     {
+       "name": "John Doe",
+       "email": "johndoe@example.com",
+       "password": "securepassword",
+       "img": "profile.jpg"
+     }
+     ```
+
+9. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+10. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+
+
+
+
+
+
 ## Contributing
 
 We welcome contributions from the open-source community. You can contribute to the development of this project.
