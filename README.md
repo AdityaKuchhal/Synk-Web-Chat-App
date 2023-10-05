@@ -117,7 +117,7 @@ Before testing the API, ensure you have the following:
 
    <img width="383" alt="Screenshot 2023-10-04 at 9 29 42 PM" src="https://github.com/AdityaKuchhal/Synk-Web-Chat-App/assets/67582528/016eb707-a164-4b9a-aacc-60fe9f1ddd1d">
 
-Follow the steps below to test the User **Registration API** using Postman:
+Follow the steps below to test the User **Registeration API** using Postman:
 
 1. **Open Postman:**
 
@@ -127,7 +127,7 @@ Follow the steps below to test the User **Registration API** using Postman:
 
    - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/user** where URL is '_http://localhost:8090_' as a global variable.
 
-8. **Set Request Body:**
+3. **Set Request Body:**
 
    - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
    - Enter a JSON object with the required fields (`name`, `email`, `password`, and optionally `img`) to simulate a user registration. For example:
@@ -140,17 +140,338 @@ Follow the steps below to test the User **Registration API** using Postman:
      }
      ```
 
-9. **Send the Request:**
+4. **Send the Request:**
 
    - Click the "Send" button to send the request to your API endpoint.
 
-10. **Review the Response:**
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+-----------------------------------------------------------------
+
+
+Follow the steps below to test the User **Login API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Users folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/user/login** where URL is '_http://localhost:8090_' as a global variable.
+
+3. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields. For example:
+     ```json
+     {
+       "email": "nirmit@example.com",
+       "password": "nirmit@synk123"
+     }
+
+
+     ```
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+-----------------------------------------------------------------
+
+
+
+Follow the steps below to test the User **SearchUser API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Users folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/user?search=John** where URL is '_http://localhost:8090_' as a global variable.
+
+This will give all the results of John with name and email for the logged in user.
+
+
+3. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+4. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+
+-----------------------------------------------------------------
+
+
+
+Follow the steps below to test the User **CreateOrAccessOnetoOneChat API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/chat** where URL is '_http://localhost:8090_' as a global variable.
+
+3. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields. For example:
+     ```json
+     
+     {
+       "userId": "651db78afa5467a889f826fa"
+     }      
+
+
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+  
+
+
+-----------------------------------------------------------------
+
+
+
+Follow the steps below to test the User **FetchingChats API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/chat** where URL is '_http://localhost:8090_' as a global variable.
+
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
 
    - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
 
 
 
 
+-----------------------------------------------------------------
+
+
+Follow the steps below to test the User **CreateNewGroupChat API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/chat/group** where URL is '_http://localhost:8090_' as a global variable.
+
+3. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields. For example:
+     ```json
+     
+    {
+       "name": "Friends",
+       "users": "[\"651db74dfa5467a889f826f4\", \"651db777fa5467a889f826f7\", \"651db78afa5467a889f826fa\"]"
+    }
+
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+
+
+
+-----------------------------------------------------------------
+
+
+Follow the steps below to test the User **RenameGroup API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/chat/rename** where URL is '_http://localhost:8090_' as a global variable.
+
+3. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields. For example:
+     ```json
+     
+    {
+    "chatId": "651de521f1e4f6a800173a9b",
+    "chatName": "Close Friends"
+   }
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+
+
+
+-----------------------------------------------------------------
+
+
+Follow the steps below to test the User **RemoveUserFromGroup API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/chat/groupremove** where URL is '_http://localhost:8090_' as a global variable.
+
+3. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields. For example:
+     ```json
+     
+   {
+       "chatId": "651de521f1e4f6a800173a9b",
+       "userId": "651db777fa5467a889f826f7"
+   }
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+
+-----------------------------------------------------------------
+
+
+Follow the steps below to test the User **AddUserToGroup API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the folder in dropdown. Make sure your endpoint is **{{URL}}/api/chat/groupadd** where URL is '_http://localhost:8090_' as a global variable.
+
+3. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields. For example:
+     ```json
+     
+   {
+       "chatId": "651de521f1e4f6a800173a9b",
+       "userId": "651db777fa5467a889f826f7"
+   }
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+  
+
+
+
+-----------------------------------------------------------------
+
+
+Follow the steps below to test the User **SendMessage API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the "Message" folder in dropdown. Make sure your endpoint is **{{URL}}/api/message** where URL is '_http://localhost:8090_' as a global variable.
+
+
+3. **Set Request Body:**
+
+   - Click on the "Body" tab and choose "raw" or "form-data," depending on how your API accepts data.
+   - Enter a JSON object with the required fields. For example:
+     ```json
+     
+ {
+    "content":"hello",
+    "chatId":"651ddeb6a20deb75bdbee53d"   
+ }
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
+
+
+
+
+-----------------------------------------------------------------
+
+
+Follow the steps below to test the User **SendMessage API** using Postman:
+
+1. **Open Postman:**
+
+   - Launch the Postman application.
+
+2. **Access Chats folder**
+
+   - Access the "Message" folder in dropdown. Make sure your endpoint is **{{URL}}/api/message/{chatId}** where URL is '_http://localhost:8090_' as a global variable.
+
+
+4. **Send the Request:**
+
+   - Click the "Send" button to send the request to your API endpoint.
+
+5. **Review the Response:**
+
+   - Postman will display the response from your API. Check the response status code, headers, and body to ensure it matches your expectations.
 
 
 
